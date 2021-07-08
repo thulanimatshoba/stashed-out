@@ -6,12 +6,12 @@
         "WordPress",
         "Themes"
     ],
-    "homepage": "https://github.com/Automattic/_s",
+    "homepage": "https://github.com/thulanimatshoba/stashed-out",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "Contributors",
-            "homepage": "https://github.com/Automattic/_s/graphs/contributors"
+            "name": "Thulani Mtahsoba",
+            "homepage": "https://github.com/thulanimatshoba/stashed-out/graphs/contributors"
         }
     ],
     "require": {
@@ -29,7 +29,7 @@
         "make-pot": "wp i18n make-pot . languages/stashed_out.pot"
     },
     "support": {
-        "issues": "https://github.com/Automattic/_s/issues",
-        "source": "https://github.com/Automattic/_s"
+        "issues": "https://github.com/thulanimatshoba/stashed-out/issues",
+        "source": "https://github.com/thulanimatshoba/stashed-out"
     }
 }
