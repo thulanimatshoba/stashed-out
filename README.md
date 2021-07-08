@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/github/thulanimatshoba/stashed-out)
+[![Build Status](https://travis-ci.org/thulanimatshoba/stashed-out.svg?branch=master)](https://travis-ci.org/github/thulanimatshoba/stashed-out)
 
 Stashed Out
 ===
