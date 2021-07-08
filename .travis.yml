@@ -16,6 +16,3 @@ php:
 matrix:
   allow_failures:
     - php: nightly
-
-script:
-  - phpcs --standard=WordPress ./**/*.php
