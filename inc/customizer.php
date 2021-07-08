@@ -56,6 +56,6 @@ function stashed_out_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function stashed_out_customize_preview_js() {
-	wp_enqueue_script( 'stashed_out-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'stashed_out-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), STASHED_OUT_VERSION, true );
 }
 add_action( 'customize_preview_init', 'stashed_out_customize_preview_js' );
