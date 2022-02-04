@@ -1,0 +1,135 @@
+#masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  padding: 0 15px;
+  overflow-y: auto;
+
+  .site-branding {
+    max-width: 150px;
+    margin: 50px auto 25px;
+  }
+
+  .header-intro {
+    h2 {
+      color: $color__background-body;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 25px;
+      font-family: 'Barlow', sans-serif;
+    }
+
+    h4 {
+      color: #bbb;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-size: 15px;
+      font-family: 'Barlow', sans-serif;
+    }
+  }
+}
+
+.social-menu {
+  margin: 0 0 50px;
+}
+
+
+/* Social Navigation */
+
+#menu-social {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        padding: 10px 5px;
+        margin-right: 5px;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        background: #212430;
+
+        &::before {
+          content: '\f408';
+          display: inline-block;
+          padding: 0 5px;
+          font-family: FontAwesome, serif;
+          font-size: 18px;
+          vertical-align: middle;
+          -webkit-font-smoothing: antialiased;
+          background-color: transparent;
+          color: $color__background-body;
+        }
+
+        &[href*="facebook.com"]::before {
+          content: '\f082';
+        }
+
+        &[href*="twitter.com"]::before {
+          content: '\f099';
+        }
+
+        &[href*="plus.google.com"]::before {
+          content: '\f0d4';
+        }
+
+        &[href*="pinterest.com"]::before {
+          content: '\f0d3';
+        }
+
+        &[href*="youtube.com"]::before {
+          content: '\f167';
+        }
+
+        &[href*="vimeo.com"]::before {
+          content: '\f194';
+        }
+
+        &[href*="instagram.com"]::before {
+          content: '\f16d';
+        }
+
+        &[href*="linkedin.com"]::before {
+          content: '\f08c';
+        }
+
+        &[href*="rss.com"]::before {
+          content: '\f143';
+        }
+
+        &[href*="dropbox.com"]::before {
+          content: '\f16b';
+        }
+
+        &[href*="skype.com"]::before {
+          content: '\f17e';
+        }
+
+        &:hover[href*="facebook.com"]::before {
+          color: #3b5998;
+        }
+
+        &:hover[href*="twitter.com"]::before {
+          color: #33ccff;
+        }
+
+        &:hover[href*="instagram.com"]::before {
+          color: #336699;
+        }
+        &:hover[href*="youtube.com"]::before {
+          color: #c4302b;
+        }
+      }
+    }
+  }
+}
+

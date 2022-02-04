@@ -1,0 +1,29 @@
+#hero {
+  height: 100vh;
+  background: url(/wp-content/themes/stashed-out/img/hero2-bg.jpeg) top center;
+  background-size: cover;
+  margin-left: 300px;
+
+  &:before {
+    content: "";
+    background: rgba(5, 13, 24, 0.3);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+
+/* Services */
+section#services {
+  margin-left: 300px;
+}
