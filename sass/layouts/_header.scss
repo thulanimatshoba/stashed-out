@@ -2,6 +2,9 @@
   position: fixed;
   top: 0;
   left: 0;
+  @media (max-width: 1199px)  {
+    left: -300px;
+  }
   bottom: 0;
   width: 300px;
   transition: all ease-in-out 0.5s;
@@ -30,6 +33,10 @@
       font-size: 15px;
       font-family: 'Barlow', sans-serif;
     }
+  }
+
+  &.toggled {
+    left: 0;
   }
 }
 
@@ -131,5 +138,23 @@
       }
     }
   }
+}
+
+/** Progress Bar **/
+.progress-container {
+  background-color: rgba(150, 150, 150, 0.6);
+  height: 10px;
+  width: 100%;
+  position: fixed;
+  margin-left: 300px;
+  z-index: 9;
+  @media (max-width: 1199px)  {
+    left: -300px;
+  }
+}
+
+.progress-bar {
+  background-color: $color_orange;
+  height: 10px;
 }
 

@@ -16,8 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 
 	<?php wp_head(); ?>
 </head>
@@ -26,5 +24,10 @@
 <?php stashed_out_wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'stashed_out' ); ?></a>
-
+<!-- Reader Progress Bar -->
+    <?php if( is_single() ) { ?>
+        <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <?php } ?>
     <?php get_template_part( 'partials/header', 'partial' ); ?>

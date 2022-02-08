@@ -1,12 +1,12 @@
 <h2 class="widget-title uk-text-center uk-padding-small"><?php _e('Latest Blog'); ?> </h2>
 
-<div uk-slider="autoplay: true; autoplay-interval: 9000">
-    <div class="uk-position-relative uk-visible-toggle" tabindex="-1">
+<div uk-slider="autoplay: false; autoplay-interval: 9000">
+    <div class="uk-position-relative uk-visible-toggle">
         <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-3@m uk-grid">
             <?php
             if ( is_page() ) {
-                $cat = get_cat_ID('Uncategorized'); //use page title to get a category ID
-                $posts = get_posts("cat=$cat&showposts=5");
+                $cat = get_cat_ID('Uncategorized' ); //use page title to get a category ID
+                $posts = get_posts("cat=$cat&showposts=4" );
 
                 if ( $posts ) {
                     foreach ( $posts as $post ):
@@ -14,8 +14,8 @@
                         <li class="ninjah-item">
                             <div class="other-story-header">
                                 <a href="<?php the_permalink(); ?>">
-                                    <?php if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())) {
-                                        the_post_thumbnail('featured-thumb', array('class' => 'skinny-thumb'));
+                                    <?php if ( ( function_exists('has_post_thumbnail' ) ) && ( has_post_thumbnail() ) ) {
+                                        the_post_thumbnail('featured-thumb', array('class' => 'skinny-thumb' ) );
                                     } else {
                                         stashed_out_placeholder_image();
                                     } ?>
@@ -23,9 +23,14 @@
 
                                 <div class="uk-meta">
                                     <span><?php the_time('jS<br> F') ?></span><br>
-                                    <!--                                    <span class="uk-margin-small-right"><i class="fa fa-eye"></i> -->
-                                    <?php //echo skinny_ninjah_getPostViews(get_the_ID());
-                                    ?><!--</span>-->
+                                    <span class="uk-margin-small-right"><i class="fa fa-eye"></i>
+                                    <?php $views = stashed_out_get_post_views( get_the_ID() );
+                                    if( stashed_out_get_post_views(get_the_ID() ) == 1 ) {
+                                        printf( __( '%d View.', 'stashed_out' ) , $views );
+                                    } else {
+                                        printf( __( '%d views.', 'stashed_out' ) , $views );
+                                    }
+                                    ?>
                                     <span class="post-comments"><i
                                                 class="fa fa-comments"> <?php comments_number(0, 1, '%'); ?></i></span>
                                 </div>

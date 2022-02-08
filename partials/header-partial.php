@@ -18,7 +18,7 @@
 
     <div class="header-intro uk-text-center">
         <h2><?php _e('2lanie Matshoba', 'stashed_out');?></h2>
-        <h4><?php _e('Developer / Runner', 'stashed_out'); ?></h4>
+        <h4><?php _e('Web Developer / Runner', 'stashed_out'); ?></h4>
     </div>
 
     <div class="social-menu uk-text-center">
@@ -26,8 +26,7 @@
     </div>
 
     <nav id="site-navigation" class="main-navigation">
-        <button class="menu-toggle" aria-controls="primary-menu"
-                aria-expanded="false"><?php esc_html_e('Primary Menu', 'stashed_out'); ?></button>
+        <i class="fa fa-bars" aria-hidden="true"></i>
         <?php get_template_part('partials/menus/header', 'menu'); ?>
     </nav><!-- #site-navigation -->
 </header><!-- #masthead -->
