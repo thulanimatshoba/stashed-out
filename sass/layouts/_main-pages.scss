@@ -1,0 +1,11 @@
+main#primary {
+  margin-left: 300px;
+  @media (max-width: 1199px)  {
+    //margin-left: -300px;
+    margin-left: 0;
+  }
+}
+
+aside {
+  margin-left: 300px;
+}

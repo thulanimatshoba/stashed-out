@@ -1,0 +1,82 @@
+#hero {
+  height: 100vh;
+  background: url(/wp-content/themes/stashed-out/img/hero2-bg.jpeg) top center;
+  background-size: cover;
+  margin-left: 300px;
+  @media (max-width: 1199px)  {
+    //margin-left: -300px;
+    margin-left: 0;
+  }
+
+  &:before {
+    content: "";
+    background: rgba(5, 13, 24, 0.3);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+
+/* Services */
+section#services {
+  margin-left: 300px;
+  @media (max-width: 1199px)  {
+    //margin-left: -300px;
+    margin-left: 0;
+  }
+  background: #040b14;
+  color: $color__background-body;
+
+  .uk-card-body:nth-child(even) {
+    box-shadow: none;
+  }
+
+  .stashed-out-shape {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+
+    svg {
+      width: 100%;
+      left: 0;
+      bottom: 3px;
+      display: block;
+      height: 50px;
+      position: relative;
+
+      path {
+        fill: $color__background-body;
+      }
+    }
+
+    &.top {
+      path {
+        fill: #040b14;
+      }
+    }
+  }
+}
+
+/* Latest Blog */
+section#latest-news {
+  margin-left: 300px;
+  @media (max-width: 1199px)  {
+    //margin-left: -300px;
+    margin-left: 0;
+  }
+
+  ul.blog-slider {
+
+  }
+}

@@ -46,6 +46,10 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
+/**
+* Load Kirki
+*/
+require get_template_directory() . '/inc/kirki.php';
 
 /**
  * Assets.
@@ -56,3 +60,13 @@ require get_template_directory() . '/inc/assets.php';
  * Filters.
  */
 require get_template_directory() . '/inc/filters.php';
+
+/**
+ * GA Tracking.
+ */
+require get_template_directory() . '/inc/ga-tracking.php';
+
+/**
+ * Post Meta
+ */
+require get_template_directory() . '/inc/post-meta.php';
