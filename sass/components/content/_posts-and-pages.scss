@@ -21,3 +21,16 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+/* post article page */
+.single {
+	.post-thumbnail {
+		height: 600px;
+		position: relative;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+		}
+	}
+}
