@@ -10,6 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="uk-container uk-container-large">
+        <?php stashed_out_post_thumbnail(); ?>
+    </div>
+
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -29,35 +33,39 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php stashed_out_post_thumbnail(); ?>
+
 
 	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'stashed_out' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+        <div class="uk-container uk-container-small">
+            <?php
+            the_content(
+                sprintf(
+                    wp_kses(
+                        /* translators: %s: Name of current post. Only visible to screen readers */
+                        __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'stashed_out' ),
+                        array(
+                            'span' => array(
+                                'class' => array(),
+                            ),
+                        )
+                    ),
+                    wp_kses_post( get_the_title() )
+                )
+            );
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'stashed_out' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+            wp_link_pages(
+                array(
+                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'stashed_out' ),
+                    'after'  => '</div>',
+                )
+            );
+            ?>
+        </div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
+        <div class="uk-container uk-container-small uk-padding-small">
 		<?php stashed_out_entry_footer(); ?>
+        </div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
