@@ -2,11 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
+  box-shadow: 1px 1px 3px #cccccca1;
   @media (max-width: 1199px)  {
-    left: -300px;
+    left: -290px;
   }
   bottom: 0;
-  width: 300px;
+  width: 290px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   padding: 0 15px;
@@ -19,11 +20,11 @@
 
   .header-intro {
     h2 {
-      color: $color__background-body;
+      color: $stashed_out_dark_shade_gray;
       margin-top: 10px;
       margin-bottom: 10px;
       font-size: 25px;
-      font-family: 'Barlow', sans-serif;
+      font-family: $stashed_out_font_barlow;
     }
 
     h4 {
@@ -31,7 +32,7 @@
       margin-top: 10px;
       margin-bottom: 30px;
       font-size: 15px;
-      font-family: 'Barlow', sans-serif;
+      font-family: $stashed_out_font_barlow;
     }
   }
 
@@ -146,10 +147,10 @@
   height: 10px;
   width: 100%;
   position: fixed;
-  margin-left: 300px;
+  margin-left: 290px;
   z-index: 9;
   @media (max-width: 1199px)  {
-    left: -300px;
+    left: -290px;
   }
 }
 

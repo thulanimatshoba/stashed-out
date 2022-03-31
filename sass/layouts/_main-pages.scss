@@ -1,11 +1,35 @@
-main#primary {
-  margin-left: 300px;
+#primary {
+  margin-left: 290px;
   @media (max-width: 1199px)  {
-    //margin-left: -300px;
     margin-left: 0;
+  }
+
+  header.entry-header {
+    h1 {
+      font-family: $stashed_font_dancing_script;
+      font-size: 40px;
+
+      &:before, &:after {
+        content: "";
+        display: inline-block;
+        width: 54px;
+        height: 24px;
+        margin-top: 5px;
+        min-width: 54px;
+      }
+
+      &:before {
+        margin-right: 10px;
+        background: url('.../../img/title-left.png');
+      }
+      &:after {
+        margin-left: 10px;
+        background: url('.../../img/title-right.png');
+      }
+    }
   }
 }
 
 aside {
-  margin-left: 300px;
+  margin-left: 290px;
 }

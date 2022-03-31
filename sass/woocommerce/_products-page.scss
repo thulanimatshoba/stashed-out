@@ -1,0 +1,49 @@
+.woocommerce {
+    &-ordering select {
+        background: transparent;
+    }
+
+    select {
+        background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1"><path d="M4 8L0 4h8z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 50%;
+        border: 1px solid $stashed_out_main_color;
+        padding: 0 5px;
+        border-radius: 0;
+        -webkit-appearance: none;
+    }
+
+    ul.products li.product .price, div.product p.price, div.product span.price {
+        color: $stashed_out_main_color;
+    }
+
+    span.onsale {
+        background: $stashed_out_main_color;
+    }
+
+    .quantity .qty {
+        border: 1px solid $stashed_out_main_color;
+        line-height: 28px;
+    }
+
+    #respond input#submit, a.button, button.button, input.button, #respond input#submit.alt, a.button.alt, button.button.alt, input.button.alt {
+        background: transparent;
+        border: 1px solid $stashed_out_main_color;
+        color: $stashed_out_main_color;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+
+        &:hover {
+            background-color: $stashed_out_main_color;
+            color: white;
+        }
+    }
+
+    #respond input#submit.alt.disabled, #respond input#submit.alt.disabled:hover, #respond input#submit.alt:disabled, #respond input#submit.alt:disabled:hover, #respond input#submit.alt:disabled[disabled], #respond input#submit.alt:disabled[disabled]:hover, a.button.alt.disabled, a.button.alt.disabled:hover, a.button.alt:disabled, a.button.alt:disabled:hover, a.button.alt:disabled[disabled], a.button.alt:disabled[disabled]:hover, button.button.alt.disabled, button.button.alt.disabled:hover, button.button.alt:disabled, button.button.alt:disabled:hover, button.button.alt:disabled[disabled], button.button.alt:disabled[disabled]:hover, input.button.alt.disabled, input.button.alt.disabled:hover, input.button.alt:disabled, input.button.alt:disabled:hover, input.button.alt:disabled[disabled], input.button.alt:disabled[disabled]:hover {
+        background-color: $stashed_out_main_color;
+    }
+}
+

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Stashed Out functions and definitions
  *
@@ -7,9 +8,9 @@
  * @package Stashed_Out
  */
 
-if ( ! defined( 'STASHED_OUT_VERSION' ) ) {
+if (!defined('STASHED_OUT_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define( 'STASHED_OUT_VERSION', '1.0.0' );
+	define('STASHED_OUT_VERSION', '1.0.0');
 }
 
 /**
@@ -35,20 +36,24 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
+if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
 /**
  * Load WooCommerce compatibility file.
  */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
-}
+// if (class_exists('WooCommerce')) {
+// 	require get_template_directory() . '/inc/woocommerce.php';
+// }
+
+add_action('after_setup_theme', function () {
+	add_theme_support('woocommerce');
+});
 
 /**
-* Load Kirki
-*/
+ * Load Kirki
+ */
 require get_template_directory() . '/inc/kirki.php';
 
 /**

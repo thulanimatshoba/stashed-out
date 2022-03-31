@@ -1,0 +1,19 @@
+.single-product {
+    .summary {
+        .product_meta {
+            span.sku_wrapper, span.posted_in, span.tagged_as {
+                display: block;
+            }
+        }
+
+        &.entry-summary {
+            margin-top: 0;
+        }
+    }
+
+    .woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
+        border: 1px solid grey;
+    }
+
+    
+}

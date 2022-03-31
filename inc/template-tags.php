@@ -27,11 +27,11 @@ if ( ! function_exists( 'stashed_out_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'stashed_out' ),
+			esc_html_x( 'On: %s', 'post date', 'stashed_out' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<span class="posted-on uk-margin-right">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 endif;
@@ -43,13 +43,27 @@ if ( ! function_exists( 'stashed_out_posted_by' ) ) :
 	function stashed_out_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'stashed_out' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			esc_html_x( 'By: %s', 'post author', 'stashed_out' ),
+			'<span class="author vcard uk-margin-right"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
 		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
+endif;
+
+if ( ! function_exists( 'stashed_out_posted_in' ) ) :
+    function stashed_out_posted_in()
+    {
+        if ('post' === get_post_type()) {
+            /* translators: used between list items, there is a space after the comma */
+            $categories_list = get_the_category_list(esc_html__(', ', 'stashed_out'));
+            if ($categories_list) {
+                /* translators: 1: list of categories. */
+                printf('<span class="cat-links">' . esc_html__('In: %1$s', 'stashed_out') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+            }
+        }
+    }
 endif;
 
 if ( ! function_exists( 'stashed_out_entry_footer' ) ) :
@@ -60,17 +74,10 @@ if ( ! function_exists( 'stashed_out_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'stashed_out' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'stashed_out' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-
-			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'stashed_out' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'stashed_out' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged: %1$s', 'stashed_out' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 

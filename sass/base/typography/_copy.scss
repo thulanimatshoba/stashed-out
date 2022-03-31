@@ -1,5 +1,7 @@
 p {
 	margin-bottom: 1.5em;
+	font-feature-settings: 'lnum';
+	-webkit-font-smoothing: antialiased;
 }
 
 dfn,

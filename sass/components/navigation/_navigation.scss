@@ -68,7 +68,7 @@
 
 	a {
 		padding: 10px 0;
-		color: rgba(255, 255, 255, 0.5);
+		color: $stashed_out_main_color;
 		position: relative;
 		display: inline-block;
 		letter-spacing: 1px;
@@ -87,7 +87,7 @@
 			right: 100%;
 			top: 0;
 			content: attr(data-hover);
-			color: $color_orange;
+			color: $stashed_out_dark_shade_gray;
 			white-space: nowrap;
 		}
 

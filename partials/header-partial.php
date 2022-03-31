@@ -17,8 +17,8 @@
     </div><!-- .site-branding -->
 
     <div class="header-intro uk-text-center">
-        <h2><?php _e('2lanie Matshoba', 'stashed_out');?></h2>
-        <h4><?php _e('Web Developer / Runner', 'stashed_out'); ?></h4>
+        <h2><?php _e('Stashed Out', 'stashed_out');?></h2>
+        <h4><?php _e('You know the vibes...', 'stashed_out'); ?></h4>
     </div>
 
     <div class="social-menu uk-text-center">
